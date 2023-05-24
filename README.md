@@ -1,2 +1,3 @@
 # Prueba-tecnica
-Prueba tecnica en Kodland
+## Prueba tecnica para el trabajo de Kodland
+primero realice la instalacion
