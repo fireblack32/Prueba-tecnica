@@ -1,4 +1,4 @@
-# PRUEBA TECNICA
+# PRUEBA TECNICA PYTHON
 ## Prueba tecnica para el trabajo 
 ### Funciones Generales
 Primero realice la instalacion del la libreria desde cmd con el comando: pip install pygame
