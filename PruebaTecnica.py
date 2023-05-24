@@ -46,18 +46,6 @@ def message2(msg, color):
     text = font.render(msg, True, color)
     ventana.blit(text, [Ancho/3, Alto/2.8])
     
-#Perder el juego
-def fail():
-    message("PERDISTE", Color_blanco)
-    message1("Presiona C para volver a intentar", Color_blanco)
-    message2("Presiona X para salir del juego", Color_blanco)
-    for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_c:
-                Gamestart()
-            if event.key == pygame.K_x:
-                pygame.quit()
-    pygame.display.update()
 #Funcion para colisiones
 def detectar_colision(Player_pos, Enemy_pos):
     Px = Player_pos[0]
@@ -69,16 +57,15 @@ def detectar_colision(Player_pos, Enemy_pos):
         if (Ey >= Py and Ey <(Py + Player_size)) or (Py >= Ey and Py <(Ey + Enemy_size)):
             return True
     return False
-#Funcion para iniciar juego
 
-#Cierre y terminación del juego
+#JUEGO
 def Gamestart():
     game_over = False
     while not game_over:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-
+            #Movimiento del jugador
             if event.type == pygame.KEYDOWN:
                 x = Player_pos[0]
                 if event.key == pygame.K_LEFT:
@@ -112,7 +99,7 @@ def Gamestart():
         #Coliciones
         if detectar_colision(Player_pos, Enemy_pos):
             game_over = True
-
+#MENU PRINCIPAL
 game_start = False
 while not game_start == True:
     message1("Presiona P para comenzar", Color_blanco)
