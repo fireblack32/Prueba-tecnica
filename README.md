@@ -1,5 +1,5 @@
 # PRUEBA TECNICA PYTHON
-## Prueba tecnica para el trabajo 
+## Prueba tecnica para KODLAND
 ### Funciones Generales
 Primero realice la instalacion del la libreria desde cmd con el comando: pip install pygame
 La cual es la que se require para realizar el codigo.
